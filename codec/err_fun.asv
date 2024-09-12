@@ -1,0 +1,17 @@
+function new_sequence = err_fun(sequence,err_pro)
+%ERR_FUN 此处显示有关此函数的摘要
+%   此处显示详细说明
+base_ATGC=['A','G','T','C'];
+err_num=round(size(sequence,2)*err_pro);
+y=randsample(20:size(sequence,2),err_num);
+for i=1:size(y,2)
+    if err_type==1
+        base_y=randsample(1:4,1);
+        new_sequence = insertAfter(sequence,sequence(y(i)-20:y(i)),base_ATGC(base_y));
+    end
+    if err_type==2
+        new_sequence=sequence;
+        
+end
+end
+
